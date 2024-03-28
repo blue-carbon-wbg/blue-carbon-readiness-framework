@@ -1,15 +1,63 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "@fontsource/inter";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Intro } from "./routes/Intro";
+import App from "./routes/App";
+
+import { Pillar1a } from "./routes/Pillar1a";
+import { NoActions } from "./routes/NoActions";
+import { BCStep } from "./components/BCStep";
+import { P1Complete } from "./routes/Pillar1a/P1Complete";
+import { Pillar1b } from "./routes/Pillar1b";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <Intro />,
+      },
+      {
+        path: "none",
+        element: <NoActions />,
+      },
+      {
+        path: "1a?",
+        element: <Pillar1a />,
+        children: [
+          {
+            path: "s/:step?",
+            element: <BCStep pillar="1a/s" />,
+          },
+          { path: "done", element: <P1Complete /> },
+        ],
+      },
+      {
+        path: "1b?",
+        element: <Pillar1b />,
+        children: [
+          {
+            path: "s/:step?",
+            element: <BCStep pillar="1b/s" />,
+          },
+          { path: "done", element: <P1Complete /> },
+        ],
+      },
+    ],
+  },
+]);
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

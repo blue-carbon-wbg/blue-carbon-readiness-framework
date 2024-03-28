@@ -20,11 +20,15 @@ const customTheme = extendTheme({
         },
         action: {
           solidBg: "#9ABAE0",
-        },
+          outlinedBg: "#CCDCEF",
+          outlinedBorder: "#9ABAE0",
+        } as any,
         complementary: {
           solidColor: "#000",
-          solidBg: "#424016",
-        },
+          solidBg: "#424016", // #43400E
+          outlinedBorder: "#43400E",
+          outlinedBg: "#E2E2DA",
+        } as any,
         focusVisible: "rgba(3, 102, 214, 0.3)",
       },
     },

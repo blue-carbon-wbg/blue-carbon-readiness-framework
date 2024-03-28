@@ -10,11 +10,14 @@ import {
   Link,
 } from "@mui/joy";
 import { ArrowForward, Checklist, ListAlt } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
+import { RouterButton } from "../components/RouterButton";
 
 export function Intro() {
+  const navigate = useNavigate();
   return (
-    <Card sx={{ mx: "2rem", maxWidth: "750px" }}>
-      <Typography level="h2" textAlign="center">
+    <Card sx={{ mx: "2rem", my: "4rem", maxWidth: "750px" }}>
+      <Typography level="h2" textAlign="center" fontWeight="bold">
         Welcome to the Blue Carbon Readiness Framework
       </Typography>
       <CardContent>
@@ -78,7 +81,7 @@ export function Intro() {
         </Stepper>
       </CardContent>
       <CardActions>
-        <Button>Start</Button>
+        <RouterButton to="/1a/s/1">Start</RouterButton>
       </CardActions>
     </Card>
   );
