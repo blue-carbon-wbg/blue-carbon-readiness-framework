@@ -1,5 +1,10 @@
 import { BlueCarbonTreeItem } from "../types";
-
+import { ReactComponent as HaveBcesIcon } from "../assets/static/p1a_assets/have_bces2.svg";
+import { ReactComponent as EstBcesIcon } from "../assets/static/p1a_assets/established_bce.svg";
+import { ReactComponent as GhgInventory } from "../assets/static/p1b_assets/ghg_inventory.svg";
+import { ReactComponent as WetlandsSupplement } from "../assets/static/p1b_assets/wetlands_supplement.svg";
+import { ReactComponent as ReddPlus } from "../assets/static/p1b_assets/redd_reference.svg";
+import { ReactComponent as FREL } from "../assets/static/p1b_assets/frl_frel.svg";
 export const dataStructure: BlueCarbonTreeItem[] = [
   {
     id: 0,
@@ -19,7 +24,9 @@ export const dataStructure: BlueCarbonTreeItem[] = [
         ],
       },
     ],
-    buttons: [{ label: "Start over", value: "root", goto: "/" }],
+    buttons: [
+      { label: "Start over", value: "restart", goto: "/", type: "root" },
+    ],
   },
   {
     id: 1,
@@ -52,12 +59,14 @@ export const dataStructure: BlueCarbonTreeItem[] = [
       },
     ],
     buttons: [
-      { label: "Yes", value: "confirm", goto: 2 },
-      { label: "No, none of these", value: "no", goto: 3 },
+      { label: "Yes", value: "confirm", goto: 2, type: "confirm" },
+      { label: "No, none of these", value: false, goto: 3, type: "next" },
     ],
+    icon: <HaveBcesIcon />,
   },
   {
     id: 2,
+    prev: 1,
     value: "have_data",
     title: "Does your country have the following data?",
     contentType: "table",
@@ -77,10 +86,14 @@ export const dataStructure: BlueCarbonTreeItem[] = [
         ],
       },
     ],
-    buttons: [{ label: "Continue", value: "root", goto: "done" }],
+    buttons: [
+      { label: "Continue", value: "continue", goto: "done", type: "root" },
+    ],
+    icon: <EstBcesIcon />,
   },
   {
     id: 3,
+    prev: 1,
     value: "previous_bce",
     contentType: "checkbox",
     title: (
@@ -100,9 +113,10 @@ export const dataStructure: BlueCarbonTreeItem[] = [
       },
     ],
     buttons: [
-      { label: "Yes", value: "confirm", goto: 2 },
-      { label: "No, none of these", value: "no", goto: 0 },
+      { label: "Yes", value: "yes", goto: 2, type: "next" },
+      { label: "No, none of these", value: false, goto: 0, type: "next" },
     ],
+    icon: <EstBcesIcon />,
   },
   {
     id: 4,
@@ -111,44 +125,51 @@ export const dataStructure: BlueCarbonTreeItem[] = [
     title: "Are BCEs included in your country’s GHG inventory?",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: 5 },
-      { label: "No", value: "no", goto: 5 },
+      { label: "Yes", value: true, goto: 5, type: "next" },
+      { label: "No", value: false, goto: 5, type: "next" },
     ],
+    icon: <GhgInventory />,
   },
   {
     id: 5,
+    prev: 4,
     value: "wetlands_supplement",
     contentType: "boolean",
     title:
       "Does your country apply the 2013 Wetlands Supplement (WS13)/2019 Refinement (R19)?",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: 6 },
-      { label: "No", value: "no", goto: 6 },
+      { label: "Yes", value: true, goto: 6, type: "next" },
+      { label: "No", value: false, goto: 6, type: "next" },
     ],
+    icon: <WetlandsSupplement />,
   },
   {
     id: 6,
+    prev: 5,
     value: "redd_plus",
     title: "Is your country engaging in REDD+?",
     contentType: "boolean",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: 7 },
-      { label: "No", value: "no", goto: "done" },
+      { label: "Yes", value: true, goto: 7, type: "next" },
+      { label: "No", value: false, goto: "done", type: "root" },
     ],
+    icon: <ReddPlus />,
   },
   {
     id: 7,
+    prev: 6,
     value: "frl_frel",
     title:
       "Has your country submitted a Forest Reference Level (FRL)/ Forest Reference Emission Levels (FREL)?",
     contentType: "boolean",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: "done" },
-      { label: "No", value: "no", goto: "done" },
+      { label: "Yes", value: true, goto: "done", type: "root" },
+      { label: "No", value: false, goto: "done", type: "root" },
     ],
+    icon: <FREL />,
   },
   {
     id: 8,
@@ -158,8 +179,8 @@ export const dataStructure: BlueCarbonTreeItem[] = [
     contentType: "boolean",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: 6 },
-      { label: "No", value: "no", goto: 6 },
+      { label: "Yes", value: true, goto: 6, type: "next" },
+      { label: "No", value: false, goto: 6, type: "next" },
     ],
   },
   {
@@ -169,8 +190,8 @@ export const dataStructure: BlueCarbonTreeItem[] = [
     contentType: "boolean",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: 6 },
-      { label: "No", value: "no", goto: 6 },
+      { label: "Yes", value: true, goto: 6, type: "next" },
+      { label: "No", value: false, goto: 6, type: "next" },
     ],
   },
   {
@@ -181,8 +202,8 @@ export const dataStructure: BlueCarbonTreeItem[] = [
     contentType: "boolean",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: 6 },
-      { label: "No", value: "no", goto: 6 },
+      { label: "Yes", value: true, goto: 6, type: "next" },
+      { label: "No", value: false, goto: 6, type: "next" },
     ],
   },
   {
@@ -193,8 +214,8 @@ export const dataStructure: BlueCarbonTreeItem[] = [
     contentType: "boolean",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: 6 },
-      { label: "No", value: "no", goto: 6 },
+      { label: "Yes", value: true, goto: 6, type: "next" },
+      { label: "No", value: false, goto: 6, type: "next" },
     ],
   },
   {
@@ -204,8 +225,8 @@ export const dataStructure: BlueCarbonTreeItem[] = [
     contentType: "boolean",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: 6 },
-      { label: "No", value: "no", goto: 6 },
+      { label: "Yes", value: true, goto: 6, type: "next" },
+      { label: "No", value: false, goto: 6, type: "next" },
     ],
   },
   {
@@ -216,8 +237,8 @@ export const dataStructure: BlueCarbonTreeItem[] = [
     contentType: "boolean",
     options: [],
     buttons: [
-      { label: "Yes", value: "yes", goto: 6 },
-      { label: "No", value: "no", goto: 6 },
+      { label: "Yes", value: true, goto: 6, type: "next" },
+      { label: "No", value: false, goto: 6, type: "next" },
     ],
   },
 ];
