@@ -12,6 +12,8 @@ import { BCStep } from "./components/BCStep";
 import { Pillar } from "./routes/Pillar";
 import { Completed } from "./routes/Completed";
 import { Fin } from "./routes/Fin";
+import { PDFViewer } from "@react-pdf/renderer";
+import MyDocument from "./components/PdfVersion";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,16 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Intro />,
+      },
+      {
+        path: "pdf",
+        element: (
+          <div style={{ height: "100vh", width: "100%", display: "flex" }}>
+            <PDFViewer width="100%">
+              <MyDocument />
+            </PDFViewer>
+          </div>
+        ),
       },
       {
         path: "none",
