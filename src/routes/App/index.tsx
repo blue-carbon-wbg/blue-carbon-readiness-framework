@@ -14,7 +14,7 @@ function App() {
           component={Sheet}
           variant="soft"
         >
-          <Sheet
+          {/* <Sheet
             variant="soft"
             invertedColors
             sx={{
@@ -26,7 +26,7 @@ function App() {
             }}
           >
             <Sidebar />
-          </Sheet>
+          </Sheet> */}
           <Sheet
             sx={{
               display: "flex",
