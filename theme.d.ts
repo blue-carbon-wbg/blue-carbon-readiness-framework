@@ -8,10 +8,12 @@ declare module "@mui/joy/styles" {
     pathway: true;
     action: true;
     complementary: true;
+    complete: true;
   }
   interface Palette {
     pathway: PaletteRange;
     action: PaletteRange;
     complementary: PaletteRange;
+    complete: PaletteRange;
   }
 }

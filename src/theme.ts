@@ -29,6 +29,11 @@ const customTheme = extendTheme({
           outlinedBorder: "#43400E",
           outlinedBg: "#E2E2DA",
         } as any,
+        complete: {
+          solidBg: "#97DFD4",
+          solidHoverBg: "#66cfbf",
+          solidActiveBg: "#40c4b0",
+        } as any,
         focusVisible: "rgba(3, 102, 214, 0.3)",
       },
     },

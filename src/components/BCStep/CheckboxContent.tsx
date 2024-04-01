@@ -11,7 +11,11 @@ export function CheckboxContent(props: {
   return (
     <Grid container spacing={2} sx={{ flexGrow: 1 }}>
       {optionGroups.map((group) => (
-        <Grid md={12 / optionGroups.length} key={group.value}>
+        <Grid
+          md={12 / optionGroups.length}
+          key={group.value}
+          sx={{ justifyContent: "center", display: "flex" }}
+        >
           <CheckboxOptionColumn
             selections={selections}
             options={group.options}
