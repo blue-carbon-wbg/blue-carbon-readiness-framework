@@ -4,14 +4,14 @@ import {
   SetStateAction,
   createContext,
   useContext,
-  useState,
 } from "react";
-import { dataStructure } from "./assets/tree";
-import { StateData, BlueCarbonTreeItem } from "./types";
+import { dataStructureAlt } from "./assets/tree";
+import { StateData, BlueCarbonTree } from "./types";
+import useLocalStorageState from "use-local-storage-state";
 
 const AppContext = createContext<{
   state: [StateData[], Dispatch<SetStateAction<StateData[]>>];
-  structure: BlueCarbonTreeItem[];
+  structure: BlueCarbonTree[];
 }>(null!);
 
 export function useAppContext() {
@@ -21,11 +21,13 @@ export function useAppContext() {
 
 export function AppContextProvider(props: { children: ReactNode }) {
   const { children } = props;
-  const [data, setData] = useState<StateData[]>([]);
+  const [data, setData] = useLocalStorageState<StateData[]>("blueCarbon", {
+    defaultValue: [],
+  });
 
   return (
     <AppContext.Provider
-      value={{ state: [data, setData], structure: dataStructure }}
+      value={{ state: [data, setData], structure: dataStructureAlt }}
     >
       {children}
     </AppContext.Provider>

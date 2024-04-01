@@ -1,7 +1,8 @@
 export interface BCButton {
   label: string;
-  value: string;
+  value: string | boolean;
   goto: number | string;
+  type: "yes" | "no" | "next" | "back" | "root" | "confirm";
 }
 
 export interface BCOptionGroup {
@@ -22,9 +23,19 @@ export interface BlueCarbonTreeItem {
   title: React.ReactNode;
   buttons: BCButton[];
   options: BCOptionGroup[];
+  icon?: React.ReactNode;
+  prev?: number;
 }
 
 export interface StateData {
-  id: number;
-  value: any[];
+  value: string;
+  data: any[];
+}
+
+export interface BlueCarbonTree {
+  pillar: string;
+  title?: string;
+  subtitle?: string;
+  subicon?: React.ReactNode;
+  data: BlueCarbonTreeItem[];
 }

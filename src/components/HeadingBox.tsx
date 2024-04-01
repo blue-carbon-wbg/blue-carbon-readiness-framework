@@ -14,7 +14,7 @@ export function HeadingBox(props: HeadingBoxProps) {
       sx={{ m: 5, alignItems: "center", justifyContent: "flex-start" }}
       direction="row"
     >
-      <Box sx={{ height: "14rem", width: "14rem" }}>{icon}</Box>
+      <Box sx={{ height: "10rem", width: "10rem" }}>{icon}</Box>
       <Box sx={{ ml: 5 }}>
         <Typography level="h2">{title}</Typography>
         <Stack
