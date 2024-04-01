@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/blue-carbon-readiness-framework/static/css/main.2d4974db.css",
-    "main.js": "/blue-carbon-readiness-framework/static/js/main.cd63c22d.js",
+    "main.js": "/blue-carbon-readiness-framework/static/js/main.8ab7ce5a.js",
     "static/media/p1.svg": "/blue-carbon-readiness-framework/static/media/p1.f7e9ba2e4378114497a532ecf0d2e064.svg",
     "static/media/youre_done.svg": "/blue-carbon-readiness-framework/static/media/youre_done.2b01f76cf10788aa7afa6019bd1e2df0.svg",
     "static/media/established_bce.svg": "/blue-carbon-readiness-framework/static/media/established_bce.5d85043f0f8fb8857dcc778ccbd95a23.svg",
@@ -37,10 +37,10 @@
     "static/media/consider.svg": "/blue-carbon-readiness-framework/static/media/consider.9696fecbf2a869809e14ee288dee6365.svg",
     "index.html": "/blue-carbon-readiness-framework/index.html",
     "main.2d4974db.css.map": "/blue-carbon-readiness-framework/static/css/main.2d4974db.css.map",
-    "main.cd63c22d.js.map": "/blue-carbon-readiness-framework/static/js/main.cd63c22d.js.map"
+    "main.8ab7ce5a.js.map": "/blue-carbon-readiness-framework/static/js/main.8ab7ce5a.js.map"
   },
   "entrypoints": [
     "static/css/main.2d4974db.css",
-    "static/js/main.cd63c22d.js"
+    "static/js/main.8ab7ce5a.js"
   ]
 }
