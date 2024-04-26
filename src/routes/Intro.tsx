@@ -80,7 +80,7 @@ export function Intro() {
         </Stepper>
       </CardContent>
       <CardActions>
-        <RouterButton to="/1a/s/1">Start</RouterButton>
+        <RouterButton to="/p/1a/s/1">Start</RouterButton>
       </CardActions>
     </Card>
   );
