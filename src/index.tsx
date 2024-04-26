@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import "@fontsource/inter";
+import "@fontsource/ibm-plex-sans";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Intro } from "./routes/Intro";
 import App from "./routes/App";
