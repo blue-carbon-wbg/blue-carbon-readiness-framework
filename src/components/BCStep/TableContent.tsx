@@ -2,6 +2,7 @@ import { Grid, Checkbox, Table } from "@mui/joy";
 import { ChangeEventHandler } from "react";
 import { BCOptionGroup } from "../../types";
 import { useAppContext } from "../../context";
+import { Navigate } from "react-router-dom";
 
 export function TableContent(props: {
   handleChange: ChangeEventHandler<HTMLInputElement>;
@@ -13,7 +14,17 @@ export function TableContent(props: {
   const {
     state: [data],
   } = useAppContext();
-
+  const theRows = rows.filter((r) =>
+    data
+      .filter(
+        (d) => d.value === "have_ecosystems" || d.value === "previous_bce"
+      )
+      .flatMap((d) => d.data)
+      .includes(r.value)
+  );
+  if (theRows.length === 0) {
+    return <Navigate to="/p/1a/done" replace />;
+  }
   return (
     <Grid container spacing={2} sx={{ flexGrow: 1 }}>
       {optionGroups.map((group) => (

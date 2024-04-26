@@ -1,13 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import reportWebVitals from "./reportWebVitals";
 import "@fontsource/inter";
-import {
-  RouterProvider,
-  createBrowserRouter,
-  createHashRouter,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Intro } from "./routes/Intro";
 import App from "./routes/App";
 
@@ -17,10 +12,11 @@ import { Pillar } from "./routes/Pillar";
 import { Completed } from "./routes/Completed";
 import { Fin } from "./routes/Fin";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <div>404</div>,
     children: [
       {
         index: true,

@@ -42,44 +42,27 @@ export function Completed() {
       {pillar === "3" && processedData && (
         <Pillar3 structuredData={processedData} okContinue={okContinue} />
       )}
-      {okContinue ? (
-        <RouterButton
-          to={pillar !== "3" ? `/p/${getNextPillar(pillar!)}/s/1` : "/fin"}
-          size="lg"
-          color="complete"
-          startDecorator={
+      <RouterButton
+        to={pillar !== "3" ? `/p/${getNextPillar(pillar!)}/s/1` : "/fin"}
+        size="lg"
+        color="complete"
+        startDecorator={
+          okContinue && (
             <SvgIcon size="lg">
               <CompleteIcon />
             </SvgIcon>
-          }
-          sx={{
-            height: "4rem",
-            mx: 2,
-            p: 3,
-          }}
-        >
-          <Typography level="body-lg" sx={{ color: "black" }}>
-            Click to continue
-          </Typography>
-        </RouterButton>
-      ) : (
-        <Box
-          sx={{
-            border: "solid 1px",
-            borderRadius: "4px",
-            padding: 3,
-            flex: 1,
-            margin: 2,
-            display: "flex",
-            justifyContent: "center",
-            bgcolor: "rgba(255 255 255 / .8)",
-          }}
-        >
-          <Typography level="body-lg">
-            You should complete the previous steps before continuing.
-          </Typography>
-        </Box>
-      )}
+          )
+        }
+        sx={{
+          height: "4rem",
+          m: 2,
+          p: 3,
+        }}
+      >
+        <Typography level="body-lg" sx={{ color: "black" }}>
+          Click to continue
+        </Typography>
+      </RouterButton>
     </>
   );
 }
