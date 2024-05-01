@@ -15,7 +15,7 @@ export function Pillar1b({ structuredData, okContinue }: CompletedPillarProps) {
       {structuredData.reddPlus && (
         <ForestReferenceLevels yes={!!structuredData.frel} />
       )}
-      {okContinue && (
+      {true && (
         <MainContentCard
           cardHeader={"Use results from completed action/steps to:"}
           content={

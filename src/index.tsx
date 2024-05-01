@@ -26,13 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "pdf",
-        element: (
-          <div style={{ height: "100vh", width: "100%", display: "flex" }}>
-            <PDFViewer width="100%">
-              <MyDocument />
-            </PDFViewer>
-          </div>
-        ),
+        element: <MyDocument />,
       },
       {
         path: "none",

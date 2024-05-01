@@ -24,8 +24,8 @@ export function PlanGovernance({ reddPlus }: { reddPlus: boolean }) {
               }}
             >
               <Typography level="body-lg">
-                Because you engage in REDD+, you should alsocheck to see whether
-                your REDD+ framework provides key structures that can be
+                Because you engage in REDD+, you should also check to see
+                whether your REDD+ framework provides key structures that can be
                 adjusted as needed
               </Typography>
             </Box>

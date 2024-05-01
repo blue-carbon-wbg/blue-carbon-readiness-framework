@@ -17,60 +17,57 @@ export function Pillar1a({ structuredData, okContinue }: CompletedPillarProps) {
         structuredData.missing.seagrasses.length === 0 &&
         structuredData.missing.saltmarshes.length === 0
       ) && <EstablishedActionItem missingData={structuredData.missing} />}
-      {okContinue && (
-        <>
-          <MainContentCard
-            cardHeader={"Recommended: Economic Valuation"}
-            content={
-              <Typography level="body-lg">
-                If economic valuations of your established BCEs are not
-                available, it is recommended that you conduct economic valuation
-                using global, regional, or local data.
-              </Typography>
-            }
-            CardProps={{
-              color: "primary",
-              variant: "outlined",
-              sx: { borderWidth: "2px" },
-            }}
-            icon={<RecommendedIcon />}
-          />
-
-          <MainContentCard
-            cardHeader={"Use results from completed action/steps to:"}
-            content={
-              <List marker="disc">
-                <ListItem>
-                  <Typography level="body-lg">
-                    Build up your country’s capacity to collect blue carbon data
-                    by funding and/or collaborating with technical and
-                    scientific organizations
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography level="body-lg">
-                    Leverage collaborations—interagency as well as the private
-                    sector—to further development of robust and relevant
-                    datasets on BCE’s foryour country
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography level="body-lg">
-                    Pilot or encourage non-state-actors to pilot Blue Carbon
-                    projects by providing access to site and data
-                  </Typography>
-                </ListItem>
-              </List>
-            }
-            CardProps={{
-              color: "complementary",
-              variant: "outlined",
-              sx: { borderWidth: "2px", mb: 3 },
-            }}
-            icon={<ComplementaryIcon />}
-          />
-        </>
+      {structuredData.established.length !== 0 && (
+        <MainContentCard
+          cardHeader={"Recommended: Economic Valuation"}
+          content={
+            <Typography level="body-lg">
+              If economic valuations of your established BCEs are not available,
+              it is recommended that you conduct economic valuation using
+              global, regional, or local data.
+            </Typography>
+          }
+          CardProps={{
+            color: "primary",
+            variant: "outlined",
+            sx: { borderWidth: "2px" },
+          }}
+          icon={<RecommendedIcon />}
+        />
       )}
+      <MainContentCard
+        cardHeader={"Use results from completed action/steps to:"}
+        content={
+          <List marker="disc">
+            <ListItem>
+              <Typography level="body-lg">
+                Build up your country’s capacity to collect blue carbon data by
+                funding and/or collaborating with technical and scientific
+                organizations
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography level="body-lg">
+                Leverage collaborations—interagency as well as the private
+                sector—to further development of robust and relevant datasets on
+                BCE’s for your country
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography level="body-lg">
+                Pilot or encourage non-state-actors to pilot Blue Carbon
+                projects by providing access to site and data
+              </Typography>
+            </ListItem>
+          </List>
+        }
+        CardProps={{
+          color: "complementary",
+          variant: "outlined",
+          sx: { borderWidth: "2px", mb: 3 },
+        }}
+        icon={<ComplementaryIcon />}
+      />
     </>
   );
 }
