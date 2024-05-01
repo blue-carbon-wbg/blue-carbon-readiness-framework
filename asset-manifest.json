@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/blue-carbon-readiness-framework/static/css/main.11846103.css",
-    "main.js": "/blue-carbon-readiness-framework/static/js/main.0fb6d20e.js",
+    "main.js": "/blue-carbon-readiness-framework/static/js/main.d2452908.js",
     "static/media/p1.svg": "/blue-carbon-readiness-framework/static/media/p1.f7e9ba2e4378114497a532ecf0d2e064.svg",
     "static/media/youre_done.svg": "/blue-carbon-readiness-framework/static/media/youre_done.2b01f76cf10788aa7afa6019bd1e2df0.svg",
     "static/media/established_bce.svg": "/blue-carbon-readiness-framework/static/media/established_bce.5d85043f0f8fb8857dcc778ccbd95a23.svg",
@@ -15,6 +15,7 @@
     "static/media/p3@0.5x.png": "/blue-carbon-readiness-framework/static/media/p3@0.5x.3756742c1e0662ac1995.png",
     "static/media/p1b@0.5x.png": "/blue-carbon-readiness-framework/static/media/p1b@0.5x.68a7fd61506e38efcdd6.png",
     "static/media/p2@0.5x.png": "/blue-carbon-readiness-framework/static/media/p2@0.5x.3a9c8b2315c43475ba15.png",
+    "fonts/ibm-plex-serif-latin-500-normal.woff": "/blue-carbon-readiness-framework/fonts/ibm-plex-serif-latin-500-normal.woff",
     "fonts/ibm-plex-sans-latin-400-normal.woff2": "/blue-carbon-readiness-framework/fonts/ibm-plex-sans-latin-400-normal.woff2",
     "fonts/ibm-plex-sans-latin-500-normal.woff": "/blue-carbon-readiness-framework/fonts/ibm-plex-sans-latin-500-normal.woff",
     "fonts/ibm-plex-sans-latin-700-normal.woff": "/blue-carbon-readiness-framework/fonts/ibm-plex-sans-latin-700-normal.woff",
@@ -53,10 +54,10 @@
     "static/media/ibm-plex-sans-greek-400-normal.woff": "/blue-carbon-readiness-framework/static/media/ibm-plex-sans-greek-400-normal.abd51e0ff98a89967165.woff",
     "static/media/ibm-plex-sans-latin-400-normal.woff": "/blue-carbon-readiness-framework/static/media/ibm-plex-sans-latin-400-normal.0d8c58b364bf39344a3f.woff",
     "main.11846103.css.map": "/blue-carbon-readiness-framework/static/css/main.11846103.css.map",
-    "main.0fb6d20e.js.map": "/blue-carbon-readiness-framework/static/js/main.0fb6d20e.js.map"
+    "main.d2452908.js.map": "/blue-carbon-readiness-framework/static/js/main.d2452908.js.map"
   },
   "entrypoints": [
     "static/css/main.11846103.css",
-    "static/js/main.0fb6d20e.js"
+    "static/js/main.d2452908.js"
   ]
 }
