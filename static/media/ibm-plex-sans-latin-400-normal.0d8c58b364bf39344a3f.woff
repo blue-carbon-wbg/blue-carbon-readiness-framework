@@ -1,0 +1,1 @@
+export default __webpack_public_path__ + "fonts/ibm-plex-sans-latin-400-normal.woff";
