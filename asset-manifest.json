@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/blue-carbon-readiness-framework/static/css/main.11846103.css",
-    "main.js": "/blue-carbon-readiness-framework/static/js/main.d2452908.js",
+    "main.js": "/blue-carbon-readiness-framework/static/js/main.f415fe9a.js",
     "static/media/p1.svg": "/blue-carbon-readiness-framework/static/media/p1.f7e9ba2e4378114497a532ecf0d2e064.svg",
     "static/media/youre_done.svg": "/blue-carbon-readiness-framework/static/media/youre_done.2b01f76cf10788aa7afa6019bd1e2df0.svg",
     "static/media/established_bce.svg": "/blue-carbon-readiness-framework/static/media/established_bce.5d85043f0f8fb8857dcc778ccbd95a23.svg",
@@ -54,10 +54,10 @@
     "static/media/ibm-plex-sans-greek-400-normal.woff": "/blue-carbon-readiness-framework/static/media/ibm-plex-sans-greek-400-normal.abd51e0ff98a89967165.woff",
     "static/media/ibm-plex-sans-latin-400-normal.woff": "/blue-carbon-readiness-framework/static/media/ibm-plex-sans-latin-400-normal.0d8c58b364bf39344a3f.woff",
     "main.11846103.css.map": "/blue-carbon-readiness-framework/static/css/main.11846103.css.map",
-    "main.d2452908.js.map": "/blue-carbon-readiness-framework/static/js/main.d2452908.js.map"
+    "main.f415fe9a.js.map": "/blue-carbon-readiness-framework/static/js/main.f415fe9a.js.map"
   },
   "entrypoints": [
     "static/css/main.11846103.css",
-    "static/js/main.d2452908.js"
+    "static/js/main.f415fe9a.js"
   ]
 }
