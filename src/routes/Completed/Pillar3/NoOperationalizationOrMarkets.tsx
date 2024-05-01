@@ -50,8 +50,9 @@ export function NoOperationalizationOrMarkets({ which }: { which: string }) {
             </ListItem>
           </List>
           <Typography level="body-lg">
-            Review Checklist 9 for examples and guidelines on leveraging
-            investment.
+            Review{" "}
+            <a href="checklists/checklist_9-WBG_BLUE_CARBON.pdf">Checklist 9</a>
+            for examples and guidelines on leveraging investment.
           </Typography>
         </>
       }

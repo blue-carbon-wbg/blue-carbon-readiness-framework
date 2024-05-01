@@ -19,7 +19,9 @@ export const dataStructureAlt: BlueCarbonTree[] = [
         title: (
           <span>
             Does your country <u>currently</u> have any of the following Blue
-            Carbon ecosystems (BCEs)?
+            Carbon ecosystems (BCEs)? (Use{" "}
+            <a href="checklists/checklist_1-WBG_BLUE_CARBON.pdf">Checklist 1</a>{" "}
+            for help identifying BCEs)
           </span>
         ),
         contentType: "checkbox",

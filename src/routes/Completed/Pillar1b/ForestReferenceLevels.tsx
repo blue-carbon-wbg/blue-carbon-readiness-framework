@@ -27,7 +27,12 @@ export function ForestReferenceLevels({ yes }: { yes: boolean }) {
           ) : (
             <>
               <ListItem>
-                <Typography level="body-lg">Review Checklist 4</Typography>
+                <Typography level="body-lg">
+                  Review{" "}
+                  <a href="checklists/checklist_4-WBG_BLUE_CARBON.pdf">
+                    Checklist 4
+                  </a>
+                </Typography>
               </ListItem>
               <ListItem>
                 <Typography level="body-lg">

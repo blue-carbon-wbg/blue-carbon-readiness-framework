@@ -116,8 +116,9 @@ function EstablishedBCEs() {
     <>
       <List component="ol" marker="decimal">
         <ListItem>
-          Follow Checklist 2 for GHG inventories steps to gather the necessary
-          data and;
+          Follow{" "}
+          <a href="checklists/checklist_2-WBG_BLUE_CARBON.pdf">Checklist 2</a>{" "}
+          for GHG inventories steps to gather the necessary data and;
         </ListItem>
         <ListItem>
           Check if relevant data can be extrapolated from existing policy and/

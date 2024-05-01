@@ -13,7 +13,10 @@ export function PlanGovernance({ reddPlus }: { reddPlus: boolean }) {
           <Typography level="title-lg">
             Focus on the design of a bespoke governance framework.
           </Typography>
-          <Typography level="body-lg">Review Checklist 8.</Typography>
+          <Typography level="body-lg">
+            Review{" "}
+            <a href="checklists/checklist_8-WBG_BLUE_CARBON.pdf">Checklist 8</a>
+          </Typography>
           {reddPlus && (
             <Box
               sx={{

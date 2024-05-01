@@ -56,7 +56,11 @@ export function NoPlan({ reddPlus }: { reddPlus: boolean }) {
               </ListItem>
             </List>
             <Typography level="body-lg">
-              Refer to Checklist 7 for a detailed list of next steps.{" "}
+              Refer to{" "}
+              <a href="checklists/checklist_7-WBG_BLUE_CARBON.pdf">
+                Checklist 7
+              </a>{" "}
+              for a detailed list of next steps.{" "}
             </Typography>
             {reddPlus && (
               <Box

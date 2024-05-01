@@ -18,7 +18,11 @@ export function NoSupplementItem() {
             </ListItem>
             <ListItem>
               <Typography level="body-lg">
-                Review Checklist 3 for ways to improve your existing inventory
+                Review{" "}
+                <a href="checklists/checklist_3-WBG_BLUE_CARBON.pdf">
+                  Checklist 3
+                </a>{" "}
+                for ways to improve your existing inventory
               </Typography>
             </ListItem>
           </List>

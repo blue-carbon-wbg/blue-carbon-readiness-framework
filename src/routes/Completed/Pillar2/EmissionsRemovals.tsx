@@ -13,7 +13,12 @@ export function EmissionsRemovals({ reddPlus }: { reddPlus: boolean }) {
           <Typography level="title-lg">
             Focus on Accounting for Emissions Reduction/Removals
           </Typography>
-          <Typography level="body-lg">Review checklists 5 and 6.</Typography>
+          <Typography level="body-lg">
+            Review{" "}
+            <a href="checklists/checklist_5-WBG_BLUE_CARBON.pdf">Checklist 5</a>{" "}
+            and{" "}
+            <a href="checklists/checklist_6-WBG_BLUE_CARBON.pdf">Checlist 6</a>
+          </Typography>
           <List component="ol" marker="decimal">
             <ListItem>
               <Typography level="body-lg">
