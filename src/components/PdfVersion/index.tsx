@@ -1,7 +1,7 @@
 import FontMain from "@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff";
 import FontMedium from "@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-500-normal.woff";
 import FontBold from "@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-700-normal.woff";
-
+import FontSerif from "@fontsource/ibm-plex-serif/files/ibm-plex-serif-latin-500-normal.woff";
 import {
   Document,
   Page,
@@ -21,6 +21,7 @@ import { PillarOneB } from "./PillarOneB";
 import { PillarOne } from "./PillarOne";
 import { PillarTwo } from "./PillarTwo";
 import { PillarThree } from "./PillarThree";
+import { IntroPage } from "./IntroPage";
 
 export interface PillarProps {
   data: StateData[];
@@ -35,6 +36,7 @@ Font.register({
   ],
 });
 
+Font.register({ family: "FontSerif", src: FontSerif });
 // Example usage inside a Document
 const MyDocument = () => {
   const {
@@ -50,8 +52,11 @@ const MyDocument = () => {
   );
 };
 
-const DocumentBase = ({ data }: { data: StateData[] }) => (
+export const DocumentBase = ({ data }: { data: StateData[] }) => (
   <Document>
+    <Page size="LETTER" style={{ flex: 1, padding: 30, ...styles.document }}>
+      <IntroPage />
+    </Page>
     <Page size="LETTER" style={{ flex: 1, padding: 30, ...styles.document }}>
       <Header />
       <PillarOne data={data} />

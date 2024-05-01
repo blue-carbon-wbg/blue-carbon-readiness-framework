@@ -14,39 +14,44 @@ import { Fin } from "./routes/Fin";
 import { PDFViewer } from "@react-pdf/renderer";
 import MyDocument from "./components/PdfVersion";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <div>404</div>,
+      children: [
+        {
+          index: true,
+          element: <Intro />,
+        },
+        {
+          path: "pdf",
+          element: <MyDocument />,
+        },
+        {
+          path: "none",
+          element: <NoActions />,
+        },
+        {
+          path: "fin",
+          element: <Fin />,
+        },
+        {
+          path: "p/:pillar",
+          element: <Pillar />,
+          children: [
+            { path: "done", element: <Completed /> },
+            { path: "s/:step", element: <BCStep /> },
+          ],
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    errorElement: <div>404</div>,
-    children: [
-      {
-        index: true,
-        element: <Intro />,
-      },
-      {
-        path: "pdf",
-        element: <MyDocument />,
-      },
-      {
-        path: "none",
-        element: <NoActions />,
-      },
-      {
-        path: "fin",
-        element: <Fin />,
-      },
-      {
-        path: "p/:pillar",
-        element: <Pillar />,
-        children: [
-          { path: "done", element: <Completed /> },
-          { path: "s/:step", element: <BCStep /> },
-        ],
-      },
-    ],
-  },
-]);
+    basename: "/blue-carbon-readiness-framework",
+  }
+);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
